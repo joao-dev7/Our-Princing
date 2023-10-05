@@ -1,0 +1,202 @@
+* {
+    font-family: 'Montserrat', sans-serif;
+}
+
+body {
+    font-size: 15px;
+    margin: 0;
+}
+.parent{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
+    background-image: url(../images/bg-top.svg), url(../images/bg-bottom.svg);
+    background-repeat: no-repeat;
+    background-size: 20%, 20%;
+    background-position: 100% -38% ,0% 110%;
+    height: 100vh;
+    width: 100vw;
+    background-color: hsl(240, 78%, 98%);
+}
+
+header {
+    margin-top: 100px; 
+    color: hsl(233, 13%, 49%);
+}
+
+.selector_am {
+    margin-top: 38px;
+    position: relative;
+    right: 15px;
+    font-size: 13px;
+    color: hsl(234, 14%, 74%);
+}
+
+.section_of_prices {
+    margin-top: 45px;
+    background-color:hsl(240, 78%, 98%); ;
+    display: flex;
+    flex-direction: row;
+    gap: 0px;
+}
+
+.section_of_prices section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 435px;
+    width: 330px;
+}
+
+.section_of_prices h2 {
+    color: hsl(233, 13%, 49%);
+    text-align: center;
+    font-size: 17px;
+    margin-bottom: 17px;
+}
+
+.section_of_prices b {
+    color: hsl(232, 13%, 33%);
+    font-size: 70px;
+}
+
+.section_of_prices b span {
+    position: relative;
+    bottom: 12.5px;
+    font-size: 35px;
+    letter-spacing: 8px;
+}
+
+.priceA {
+    display: none;
+}
+
+.list_of_benefits {
+    font-size: 14px;
+    list-style-type: none;
+    padding: 0;
+	width: 85%;
+    text-align: center;
+    color: hsl(233, 13%, 49%);
+}
+
+.list_of_benefits li {
+    padding: 1em 0;
+	border-bottom: 1px solid hsla(0, 0%, 76%, 0.411);
+}
+.list_of_benefits li:first-child {
+    border-top: 1px solid hsla(0, 0%, 77%, 0.411);
+}
+
+.learn_more {
+    cursor: pointer;
+    margin-top: 15px;
+    width: 85%;
+    height: 43px;
+    border: 0;
+    border-radius: 8px;
+    background:linear-gradient(90deg, hsl(236, 72%, 79%) , hsl(237, 63%, 64%));
+    color:hsl(240, 78%, 98%);
+    text-transform: uppercase;
+    font-size: 13px;
+}
+
+.learn_more:hover {
+    border: 1px solid hsl(237, 63%, 64%) ;
+    color:hsl(237, 63%, 64%) ;
+    background:hsl(240, 78%, 98%) ;
+}
+
+.basic_section {
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 14px 28px, rgba(0, 0, 0, 0.1) 0px 10px 10px;
+}
+.master_section {
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 14px 28px, rgba(0, 0, 0, 0.1) 0px 10px 10px;
+}
+
+section.professional_section {
+    background:linear-gradient(hsl(236, 72%, 79%) , hsl(237, 63%, 64%));
+    height: 460px;
+    border-radius: 10px;
+}
+.professional_section li,.professional_section h2,.professional_section b{
+    color:hsl(240, 78%, 98%);
+}
+
+.professional_section .learn_more {
+    background:hsl(240, 78%, 98%) ;
+    color:hsl(237, 63%, 64%);
+    border: 0;
+    margin-bottom: 25px;
+}
+
+.professional_section .learn_more:hover {
+    background-color: hsl(237, 63%, 64%);
+    color: hsl(240, 78%, 98%) ;
+    border: 1px solid hsl(240, 78%, 98%);
+}
+
+.switch {
+    margin-left: 18px;
+    margin-right: 18px;
+    position: relative;
+    bottom: 4px;
+    display: inline-block;
+    width: 46px;
+    height: 26px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    background:linear-gradient(hsl(236, 72%, 79%) , hsl(237, 63%, 64%));
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color:  hsl(240, 78%, 98%);
+    -webkit-transition: .4s;
+    transition: .4s; 
+}
+
+.slider:hover {
+    background:linear-gradient(90deg , hsl(234, 50%, 84%) , hsl(236, 69%, 80%));
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 20px;
+    width: 20px;
+    left: 3px;
+    bottom: 3.1px;
+    background-color:  hsl(240, 78%, 98%);
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+  
+input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(20px);
+}
+  
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
